@@ -1,0 +1,11 @@
+.container {
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center;     /* Vertically center */
+    height: 100vh; /* Or a specific height */
+    width: 100vw;  /* or a specific width*/
+  }
+  
+  .centered-div {
+    /* Any styling for the centered div */
+  }
