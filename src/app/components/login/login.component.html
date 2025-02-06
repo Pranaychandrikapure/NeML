@@ -1,1 +1,16 @@
-<p-button  label="Submit"></p-button>
+<div class="login-container">
+    <h2>Login</h2>
+    <form>
+        <div class="input-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Enter your username" required pInputText />
+        </div>
+        <div class="input-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter your password" required pInputText />
+        </div>
+        <button type="submit" class="login-btn">Login</button>
+        <button type="submit" class="signup-btn">SignUp</button>
+    </form>
+</div>
+<<router-outlet></router-outlet>
