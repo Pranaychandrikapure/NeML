@@ -3,21 +3,21 @@
     <form>
         <div class="input-group">
             <label for="username">Name</label>
-            <input type="text" id="username" placeholder="Enter your name" required pInputText />
+            <input type="text" name="name" id="name" [(ngModel)]="user.name" placeholder="Enter your name" required pInputText />
         </div>
         <div class="input-group">
             <label for="username">Email</label>
-            <input type="text" id="username" placeholder="Enter your email" required pInputText />
+            <input type="email" name="email" id="email" [(ngModel)]="user.email" placeholder="Enter your email" required pInputText />
         </div>
         <div class="input-group">
             <label for="username">Phone</label>
-            <input type="text" id="username" placeholder="Enter your phone number" required pInputText />
+            <input type="text" name="phone" id="username" [(ngModel)]="user.phone" placeholder="Enter your phone number" required pInputText />
         </div>
         <div class="input-group">
             <label for="password">Password</label>
-            <input type="password" id="password" placeholder="Enter your password" required pInputText />
+            <input type="password" name="password" id="password" [(ngModel)]="user.password" placeholder="Enter your password" required pInputText />
         </div>
-        <button type="submit" class="signup-btn">SignUp</button>
-        <button type="submit" class="login-btn">Login</button>
+        <button type="submit" (click)="onSignup()" class="signup-btn">SignUp</button>
+        <button type="submit" (click)="navigateToLogin()" class="login-btn">Login</button>
     </form>
 </div>
