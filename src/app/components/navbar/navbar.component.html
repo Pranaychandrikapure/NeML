@@ -2,8 +2,13 @@
     <div class="logo">My Website</div>
     <div class="menu-toggle" (click)="toggleMenu()">☰</div>
     <div class="menu" [class.active]="isMenuOpen">
-        <a  href="/login" >Login</a>
-        <a href="/register">Register</a>
+        @if(isToken){
+        <a href="#" (click)="onLogout()">Logout</a>
+        }
+        @else{
+            <a  href="/login" >Login</a>
+            <a href="/register">Register</a>
+        }
         <a href="#">Contact</a>
     </div>
 </nav>

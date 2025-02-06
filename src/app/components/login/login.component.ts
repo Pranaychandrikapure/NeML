@@ -42,14 +42,11 @@ export class LoginComponent {
     if (foundUser) {
       alert('Login successful!');
       
-      // Generate a hashed token using SHA-256
-      const authToken = CryptoJS.SHA256(foundUser.email + Date.now()).toString();
-      console.log('====================================');
-      console.log('Token:', authToken);
-      console.log('====================================');
-      // Store token and user details
-      localStorage.setItem('loggedInUser', JSON.stringify(foundUser)); 
-      localStorage.setItem('token', authToken);
+      // Encrypt email using AES
+      const encryptedToken = CryptoJS.AES.encrypt(foundUser.email, this.secretKey).toString();
+
+      // Store the encrypted token in localStorage
+      localStorage.setItem('token', encryptedToken);
 
       this.router.navigate(['/home']); // Redirect to home page
     } else {
